@@ -1,6 +1,5 @@
 [Desktop Entry]
 Name=Sweet
-Comment[es]=Un tema oscuro y moderno para Plasma 5
 Comment=A dark and modern theme for Plasma 5
 X-KDE-PluginInfo-Author=EliverLara
 X-KDE-PluginInfo-Email=eliverlara@gmail.com
@@ -11,7 +10,3 @@ X-KDE-PluginInfo-Category=Plasma Theme
 X-KDE-PluginInfo-License=CC BY-SA 4.0
 X-KDE-PluginInfo-EnabledByDefault=true
 X-Plasma-API=5.0
-
-
-[AdaptiveTransparency]
-enabled=true
