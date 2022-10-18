@@ -45,13 +45,9 @@ button {
       &:hover {
         transition: $button_transition;
         transition-duration: 500ms;
+        @include button(hover,$selected_bg_color,$selected_fg_color);
+
         &:active { transition: $button_transition; }
-      }
-      &.image-button:hover {
-        &, &:backdrop {
-          background-color: $selected_bg_color;
-          color: $selected_fg_color;
-        }
       }
     }
 
@@ -66,13 +62,6 @@ button {
 
       transition-duration: 50ms;
     }
-    &:active {
-      color: $fg_color;
-    }
-    &:active:hover, &:checked {
-      color: $selected_fg_color;
-    }
-
 
     &:backdrop {
       &.flat, & {
@@ -218,15 +207,12 @@ button {
     &:backdrop { @include button(osd-backdrop); }
 
     &.flat {
-      @include button(osd);
+      @include button(undecorated);
 
       box-shadow: none; //FIXME respect no edge on the button mixin
       text-shadow: 0 1px black;
       -gtk-icon-shadow: 0 1px black;
 
-      &.image-button {
-        @include button(osd); 
-      } 
       &:hover { @include button(osd-hover); }
 
       &:disabled {
@@ -236,7 +222,7 @@ button {
         box-shadow: none;
       }
 
-      &:backdrop { @include button(osd-backdrop); }
+      &:backdrop { @include button(undecorated); }
 
       &:active,
       &:checked { @include button(osd-active); }
@@ -431,7 +417,7 @@ toolbar {
                                       // needed since those are flat...
   @include button(undecorated);
 
-  &:hover { color: $selected_bg_color; }
+  &:hover { color: $selected_fg_color; }
 
   &:active,
   &:checked{ color: darken($selected_bg_color, 5%); }

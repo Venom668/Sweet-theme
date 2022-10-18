@@ -76,6 +76,7 @@ StEntry {
   }
   
   StLabel.hint-text { color: transparentize($fg_color, 0.3); }
+
 }
 
 
@@ -111,28 +112,26 @@ StScrollBar {
 
 /* Slider */
 
-.slider {
-  height: 1em;
-  color: lighten($fg_color, 15%);
-  border-color: black;
-  -slider-height: 0.1em;
-  -slider-background-color: $gray; //background of the trough
-  -slider-border-color: black; //trough border color
-  -slider-active-background-color: $cyan; //active trough fill
-  -slider-active-border-color: $lime; //active trough border
-  -slider-border-width: 0;
-  -slider-handle-radius: 6px;
+$slider_size: 16px;
 
-  -barlevel-height: 0.1em;
-  -barlevel-background-color: $gray;
-  -barlevel-border-color: black;
-  -barlevel-active-background-color: $cyan;
-  -barlevel-active-border-color: $lime;
-  -barlevel-border-width: 0;
-  -barlevel-handle-radius: 6px; 
-  -barlevel-overdrive-color: $cyan;
-  -barlevel-overdrive-border-color: transparent;
+.slider {
+  color: $fg_color;
+  // slider trough
+  -barlevel-height: 2px;
+  -barlevel-background-color: transparentize($fg_color, 0.8); //background of the trough
+  -barlevel-border-width: 2px; 
+  -barlevel-border-color: transparent; // trough border color
+  // fill style
+  -barlevel-active-background-color: $yellow;
+  -barlevel-active-border-color: transparent;
+  // overfill style (red in this case)
+  -barlevel-overdrive-color: $destructive_color;
+  -barlevel-overdrive-border-color: transparent; //trough border when red;
   -barlevel-overdrive-separator-width: 0px;
+  // slider handler
+  -slider-handle-radius: $slider_size * 0.5; // half the size of the size
+  -slider-handle-border-width: 0;
+  -slider-handle-border-color: transparent; // because 0 width
 }
 
 /* Check Boxes */
@@ -385,7 +384,7 @@ StScrollBar {
   //this is the width of the entire modal popup
   width: 34em;
   border: none;
-  border-radius: 2px;
+  border-radius: 10px;
 
   .message-dialog-main-layout { spacing: 24px; padding: 10px; }
   .message-dialog-content { spacing: 16px; }
@@ -868,7 +867,7 @@ StScrollBar {
       box-shadow: none;
       @include gradient();
       color: $selected_fg_color;
-      text-shadow: none;
+      text-shadow: 0px 0px 2px rgba(92, 92, 92, 0.9);
       transition-duration: 200ms;
 
     }
@@ -922,14 +921,11 @@ StScrollBar {
 
   // calendar popover
 
-  .world-clocks-button, .weather-button, .events-button {
-
-    &, .calendar {
+  .calendar, .world-clocks-button, .weather-button, .events-button {
       background: transparent;
       border: none;
       color: $fg_color;
       box-shadow: none;
-    }
   }
 
     .calendar,
@@ -1034,9 +1030,15 @@ StScrollBar {
       margin: 2px;
       border-radius: 99px;
       color: $fg_color;
-      &:hover,&:focus { background-color: lighten($bg_color,5%); }
+      background-gradient-direction: none;
+
+      &:hover, &:focus { 
+        background-color: lighten($bg_color, 12%);
+        box-shadow: none;
+      }
       &:active,&:selected {
         color: $selected_fg_color;
+        background-color: $selected_bg_color;
         @include gradient();
         border-color: black; //avoid jumparound due to today
         box-shadow: none;
@@ -1172,16 +1174,25 @@ StScrollBar {
             }
           }
 
-          .message-media-control {
-            padding: 12px;
-            color: darken($fg_color, 20%);
+/* Media Controls */
+.message-media-control {
 
-            &:last-child:ltr { padding-right: 18px; }
-            &:last-child:rtl { padding-left: 18px; }
-            &:hover { color: $fg_color; }
-            &:insensitive { color: darken($fg_color,40%); }
-          }
+  color: $fg_color;
 
+  // colors are lightened since the media controls are in a card
+  &:hover {
+    background-color: lighten($base_color, 8%);
+    color: $selected_fg_color;
+  }
+
+  &:active { 
+    background-color: lighten($base_color, 12%);
+    color: $selected_fg_color;
+  }
+
+  &:insensitive { color: lighten($insensitive_fg_color, 5%); }
+  
+}
           .media-message-cover-icon {
             icon-size: 48px !important;
             &.fallback {
@@ -1511,7 +1522,7 @@ StScrollBar {
     padding: 4px 32px;
     &:checked { 
       @include gradient();
-      color: #000;
+      color: #fff;
     }
     &:hover {
       border: none;
@@ -1562,7 +1573,7 @@ StScrollBar {
   }
 
   %icon_tile {
-    color: $fg_color;
+    color: $selected_fg_color;
     padding: 6px;
     border: none;
     transition-duration: 100ms;
@@ -1579,6 +1590,9 @@ StScrollBar {
 .app-folder-dialog { //style like the dash
   background-color:  $_dash_bg;
   border: none;
+
+  & .folder-name-label { color: $fg_color; }
+  
   .edit-folder-button {
     @extend %button;
 

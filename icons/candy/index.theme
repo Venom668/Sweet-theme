@@ -1,5 +1,5 @@
 [Icon Theme]
-Name=Candy
+Name=candy-icons
 Comment=Sweet gradient icons.
 Inherits=breeze-dark,hicolor
 FollowsColorScheme=true

@@ -1,6 +1,7 @@
 // Xfce Panel
 .xfce4-panel.panel {
     background-color: $panel_bg_color;
+  
     text-shadow: none;
     -gtk-icon-shadow: none;
   
@@ -33,12 +34,12 @@
   
     &:hover {
       border: none;
-      background-color: lighten($panel_bg_color, 7%);
+      background-color: lighten($panel_bg_color, 10%);
     }
     &:active, &:checked {
       color: $selected_fg_color;
-      background-color: lighten($panel_bg_color, 5%);
       border-bottom: 2px solid $selected_bg_color;
+      background-color: lighten($panel_bg_color, 5%);
   
       label, image { color: inherit; }
     }
@@ -71,7 +72,6 @@
 scrolledwindow.sidebar treeview.view {
   background: darken($_sidebar_color, 2%);
   padding: 1.5px;
-  color: #98abb2;
 }
 
 /* path-bar of thunar */
@@ -93,7 +93,7 @@ window.thunar toolbar#location-toolbar > toolitem > widget > widget.linked.path-
 window.thunar paned > scrolledwindow treeview.view {
 
   &:hover {
-    background: darken($_sidebar_color, 5%);
+    background: darken($_sidebar_color, 3%);
   }
   &:selected {
     @include button(active-header);
