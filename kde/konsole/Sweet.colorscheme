@@ -89,8 +89,11 @@ Color=92,99,112
 Color=255,255,255
 
 [General]
+Anchor=0.5,0.5
 Blur=true
 ColorRandomization=false
 Description=Sweet
+FillStyle=Tile
 Opacity=0.83
 Wallpaper=
+WallpaperOpacity=1

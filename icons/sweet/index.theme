@@ -1,11 +1,11 @@
 [Icon Theme]
-Name=sweet-purple
+Name=Sweet
 Comment=Purple folders for sweet theme.
-Inherits=candy-icons,breeze-dark,hicolor
+Inherits=candy,breeze-dark,hicolor
 FollowsColorScheme=true
 
 # Directory list
-Directories=places
+Directories=Places
 
 
 [Apps]
