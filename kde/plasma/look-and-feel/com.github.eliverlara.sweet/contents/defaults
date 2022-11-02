@@ -5,14 +5,17 @@ widgetStyle=kvantum
 ColorScheme=Sweet
 
 [kdeglobals][Icons]
-Theme=Sweet
+Theme=sweet
 
 [kcminputrc][Mouse]
-cursorTheme=Sweet
+cursorTheme=sweet_cursors
 
 [plasmarc][Theme]
-name=Sweet
+name=sweet
 
 [kwinrc][org.kde.kdecoration2]
 library=com.github.zren.material
 theme=Material
+
+[KSplash]
+Theme=com.github.eliverlara.sweet
