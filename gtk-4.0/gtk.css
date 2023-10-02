@@ -2686,8 +2686,6 @@ row {
     background-color: rgba(197, 14, 210, 0.5); }
   row.activatable:selected:backdrop {
     background-color: rgba(197, 14, 210, 0.6); }
-  row.activatable button.flat {
-    background-color: transparent; }
 
 columnview > listview > row {
   padding: 0; }
@@ -4550,7 +4548,7 @@ treeview.view > header > button:active {
 window {
   border-width: 0px; }
   window.csd {
-    box-shadow: 0 4px 9px 1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.75);
     margin: 0px;
     border-radius: 4px 4px 0 0; }
     window.csd:backdrop {
@@ -5603,7 +5601,6 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
   border: none; }
 .nautilus-window #NautilusPathBar {
   background: transparent;
-  height: 20px;
   margin-top: 7px;
   margin-bottom: 7px; }
   .nautilus-window #NautilusPathBar .dim-label, .nautilus-window #NautilusPathBar label.separator, .nautilus-window #NautilusPathBar .titlebar .subtitle, .titlebar .nautilus-window #NautilusPathBar .subtitle,
