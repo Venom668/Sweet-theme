@@ -5,11 +5,16 @@
 
   &.panel {
     background-color: $panel_bg_color;
-  
+    color: $panel_fg_color;
     text-shadow: none;
     -gtk-icon-shadow: none;
   
-    button.flat { @extend %panelbutton; }
+    button.flat:not(.open_group){ @extend %panelbutton; }
+
+    //Systemload plugin
+    progressbar trough {
+      background-color: transparentize(white, 0.85);
+    }
   }
 }
   
@@ -36,14 +41,15 @@
     border-radius: 0;
     border: none;
     background-color: transparentize($panel_bg_color, 1);
+    transition: none;
   
     &:hover {
       border: none;
-      background-color: lighten($panel_bg_color, 10%);
+      background-color: lighten($panel_bg_color, 7%);
     }
     &:active, &:checked {
-      color: $selected_fg_color;
-      border-bottom: 2px solid $selected_bg_color;
+      color: $panel_fg_color;
+      @include selected-tab(right);
       background-color: lighten($panel_bg_color, 5%);
   
       label, image { color: inherit; }
@@ -93,6 +99,7 @@ window.thunar toolbar#location-toolbar > toolitem > widget > widget.linked.path-
 .thunar scrolledwindow.sidebar treeview.view {
   background: darken($_sidebar_color, 2%);
   padding: 1.5px;
+  color: #98abb2;
 
   &:hover {
     background: lighten($_sidebar_color, 5%);
@@ -106,4 +113,12 @@ window.thunar toolbar#location-toolbar > toolitem > widget > widget.linked.path-
 
 window.thunar toolbar#location-toolbar entry {
   border-radius: 10px;
+}
+
+/* Vala-appmenu-plugin*/
+
+.-vala-panel-appmenu-core scrolledwindow,
+.-vala-panel-appmenu-private > menuitem,
+.-vala-panel-appmenu-private > menuitem:first-child > label {
+    color: $panel_fg_color;
 }

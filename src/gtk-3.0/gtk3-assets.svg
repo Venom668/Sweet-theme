@@ -2,26 +2,26 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:export-ydpi="90.000000"
    inkscape:export-xdpi="90.000000"
    width="208"
    height="232"
    id="svg11300"
    sodipodi:version="0.32"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="gtk3-assets.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
    style="display:inline;enable-background:new"
-   inkscape:export-filename="/home/sam/moka-template.png"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:dc="http://purl.org/dc/elements/1.1/">
+   inkscape:export-filename="/home/sam/moka-template.png">
   <title
      id="title3004">EvoPop Theme Template</title>
   <sodipodi:namedview
@@ -33,18 +33,18 @@
      borderopacity="0.25490196"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.86811065"
-     inkscape:cx="89.850297"
-     inkscape:cy="129.01581"
+     inkscape:zoom="9.8215508"
+     inkscape:cx="101.34104"
+     inkscape:cy="50.494726"
      inkscape:current-layer="layer2"
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:showpageshadow="false"
-     inkscape:window-width="1536"
-     inkscape:window-height="806"
+     inkscape:window-width="1366"
+     inkscape:window-height="713"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="25"
      width="400px"
      height="300px"
      inkscape:snap-nodes="true"
@@ -58,8 +58,7 @@
      inkscape:bbox-paths="true"
      inkscape:bbox-nodes="true"
      inkscape:snap-bbox-edge-midpoints="true"
-     inkscape:snap-bbox-midpoints="true"
-     inkscape:pagecheckerboard="0">
+     inkscape:snap-bbox-midpoints="true">
     <inkscape:grid
        spacingy="1"
        spacingx="1"
@@ -189,8 +188,8 @@
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
        id="filter4588"
-       x="-0.043205327"
-       width="1.0864107"
+       x="-0.04320544"
+       width="1.0864109"
        y="-0.053991504"
        height="1.107983">
       <feGaussianBlur
@@ -202,8 +201,8 @@
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
        id="filter4588-3"
-       x="-0.043205327"
-       width="1.0864107"
+       x="-0.04320544"
+       width="1.0864109"
        y="-0.053991504"
        height="1.107983">
       <feGaussianBlur
@@ -215,8 +214,8 @@
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
        id="filter4711-7"
-       x="-0.03"
-       width="1.06"
+       x="-0.029999999"
+       width="1.0599999"
        y="-0.12"
        height="1.24">
       <feGaussianBlur
@@ -228,8 +227,8 @@
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
        id="filter4622-6"
-       x="-0.03"
-       width="1.06"
+       x="-0.029999999"
+       width="1.0599999"
        y="-0.12"
        height="1.24">
       <feGaussianBlur

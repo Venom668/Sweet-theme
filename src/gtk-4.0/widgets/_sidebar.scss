@@ -117,7 +117,8 @@ stacksidebar {
 
 /*--*/
 
-placessidebar.sidebar, .nautilus-window .navigation-sidebar{
+placessidebar.sidebar, .nautilus-window .navigation-sidebar {
+
 		background-color: transparent;
 		background-image:linear-gradient(to right, #171e27 40px,
 												$_sidebar_color 35px,$_sidebar_color 36px,
@@ -125,19 +126,22 @@ placessidebar.sidebar, .nautilus-window .navigation-sidebar{
 												$_sidebar_color 100%);
 		row{
 			&.sidebar-row {
+
         margin: 0;
         border-radius: 0;
-        padding-top: 2px;
-        padding-bottom: 2px;
+        padding: 2px 11px;
 
-        label { color: #98abb2; }
+        label { 
+          color: #98abb2; 
+          padding-left: 8px;
+        }
 				&.sidebar-row{
 					.sidebar-icon {
 						margin-left:-14px;
 						margin-right: 12px;
 						padding-left: 14px;
 						padding-right: 12px;
-						color: #9ecfa2;
+						color: #98abb2;
 					}
 				}
 				&:hover{
@@ -148,10 +152,8 @@ placessidebar.sidebar, .nautilus-window .navigation-sidebar{
 				}
 
 				&:selected{
-
 					color: rgba(255, 255, 255, 0.938);
           label { color: $selected_bg_color; }
-
 					background-color: transparent;
 					background-image:linear-gradient(to right, $selected_bg_color 40px,
 																rgba(65,67,75,0) 36px, rgba(65,67,75,0)97%);
@@ -202,4 +204,16 @@ placessidebar.sidebar, .nautilus-window .navigation-sidebar{
 	}
   
   
+}
+
+// Gnome 46: File operations status bar at the bottom of sidebar
+.bottom-bar  {
+  background-color: $_sidebar_color;
+  button {
+    @include button(undecorated);
+    .view { 
+      background-color: transparent; 
+      color: #98abb2;
+    }
+  }
 }

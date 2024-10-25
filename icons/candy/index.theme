@@ -5,15 +5,8 @@ Inherits=breeze-dark,hicolor
 FollowsColorScheme=true
 
 # Directory list
-Directories=places/16,places/48,apps/scalable,devices/scalable,preferences/scalable,mimetypes/scalable
+Directories=apps/scalable,devices/scalable,mimetypes/scalable,places/16,places/48,preferences/scalable,status/scalable
 
-
-[Apps]
-Context=Applications
-Size=96
-MinSize=8
-MaxSize=192
-Type=Scalable
 
 [apps/scalable]
 Size=96
@@ -24,22 +17,7 @@ Type=Scalable
 
 [devices/scalable]
 Size=96
-Context=Applications
-MinSize=8
-MaxSize=512
-Type=Scalable
-
-[preferences/scalable]
-Size=96
-Context=Applications
-MinSize=8
-MaxSize=512
-Type=Scalable
-
-
-[Mimes]
-Context=MimeTypes
-Size=96
+Context=Devices
 MinSize=8
 MaxSize=512
 Type=Scalable
@@ -58,7 +36,6 @@ MinSize=8
 MaxSize=32
 Type=Scalable
 
-
 [places/24]
 Size=24
 Context=Places
@@ -71,31 +48,17 @@ MinSize=8
 MaxSize=512
 Type=Scalable
 
-[Status]
+[preferences/scalable]
+Size=96
+Context=Applications
+MinSize=8
+MaxSize=512
+Type=Scalable
+
+[status/scalable]
+Size=96
 Context=Status
-Size=96
 MinSize=8
 MaxSize=512
 Type=Scalable
 
-[Categories]
-Context=Categories
-Size=96
-MinSize=8
-MaxSize=512
-Type=Scalable
-
-
-[Devices]
-Size=96
-Context=Devices
-Type=Scalable
-MinSize=8
-MaxSize=512
-
-[Emblems]
-Size=96
-Context=Emblems
-Type=Scalable
-MinSize=8
-MaxSize=512

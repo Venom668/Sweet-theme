@@ -70,12 +70,10 @@
   }
 
   .titlebar {
-    .search {
-      border: 1px solid transparent;
-      border-radius: 10px;
-      box-shadow: none;
-      margin-top: 10px;
-      margin-bottom: 10px;
+    .search{
+      border: 1px solid $borders_color;
+      border-radius: 3px;
+      margin: 10px 5px 10px 0;
     }
     .path-bar-box {
       .dim-label {
@@ -96,18 +94,13 @@
 
     .path-buttons-box {
 
-      .dim-label {
-        color: transparent;
-     }
+      .dim-label { color: transparent; }
   
       //Buttons before current path
       button {
-         .horizontal  .dim-label { color: $headerbar_fg_color; }
+        .horizontal  .dim-label { color: $headerbar_fg_color; }
         &:hover, &:focus {
-          .dim-label {
-            
-            color: $selected_bg_color;
-          }
+          .dim-label { color: $selected_bg_color; }
         }
 
       }
@@ -129,7 +122,6 @@
 
   .linked:not(.vertical) > entry { 
     border-radius: 10px;
-    margin-right: 5px;
     &:focus {
       border-color: transparentize($selected_bg_color, 0.4);
     }

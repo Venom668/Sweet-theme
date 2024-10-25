@@ -69,7 +69,7 @@
   @if $t==normal {
     color: $text_color;
     border-color: $borders_color;
-    background-color: lighten($base_color, 4%);
+    background-color: $base_color;
     // for the transition to work the number of shadows in different states needs to match, hence the transparent shadow here.
   }
   @if $t==focus {
@@ -207,14 +207,14 @@
     box-shadow: none;
   //  border: 1px solid $c;
     color: white;
-    border-radius: 100px;
+    border-radius: 8px;
     background: $suggested_bg_color; }
 
     @if $t==rounded-red {
       box-shadow: none;
     //  border: 1px solid $c;
       color: white;
-      border-radius: 100px;
+      border-radius: 8px;
       background: $destructive_bg_color; 
     }
   
@@ -224,7 +224,7 @@
   //
     font-weight: normal;
     color: $tc;
-    background-color: lighten(mix($bg_color, $base_color, 15%), 4%);
+    background-color: mix($bg_color, $base_color, 15%);
     text-shadow: none;
   }
 
@@ -261,8 +261,8 @@
 
 @else if $t==active-header {
   border-radius: 23px;
-  background: linear-gradient(to right, #c50ed2, #8500f7);
-  box-shadow: 0px 0px 5px transparentize(#c50ed2, 0.02);
+  background: #00e8b7;
+  box-shadow: 0px 2px 4px rgba(177, 177, 177, 0.753);
   color: rgb(255, 255, 255);
 }
 
@@ -600,12 +600,8 @@ box-shadow: none;
   box-shadow: none;
 }
 
-@mixin scale-highlight($dir, $state:normal) {
-
-  $_init_gradient_color : #C751FB;
-  $_end_gradient_color : #6D44DE;
-
-  background: linear-gradient(to $dir, if($state==disabled, transparentize($_init_gradient_color, 0.5),$_init_gradient_color),if($state==disabled, transparentize($_end_gradient_color, 0.5),$_end_gradient_color));
+@mixin scale-highlight($dir) {
+  background: linear-gradient(to $dir, #00f17d, #00f7d2);
 }
 
 @mixin selected-tab($dir) {
@@ -613,7 +609,7 @@ box-shadow: none;
   linear-gradient(to $dir, $selected-tab-gradient-start, $selected-tab-gradient-end)
   left 
   bottom
-  lighten(mix($base_color, $headerbar_color, 30%), 2%)
+  lighten(mix($base_color, darken($headerbar_color, 8%), 30%), 4%)
   no-repeat; 
   @if $dir==right { background-size: 100% 2px; }
   @else if $dir==bottom { background-size: 2px 100%; } 

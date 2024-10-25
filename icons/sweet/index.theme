@@ -5,22 +5,22 @@ Inherits=candy,breeze-dark,hicolor
 FollowsColorScheme=true
 
 # Directory list
-Directories=Places
+Directories=Actions,Emblems,Places,Status
 
 
-[Apps]
-Context=Applications
-Size=96
-MinSize=8
-MaxSize=192
-Type=Scalable
-
-[Mimes]
-Context=MimeTypes
-Size=96
+[Actions]
+Context=Actions
+Size=22
 MinSize=8
 MaxSize=512
 Type=Scalable
+
+[Emblems]
+Context=Emblems
+Size=22
+Type=Scalable
+MinSize=8
+MaxSize=512
 
 [Places]
 Context=Places
@@ -31,28 +31,7 @@ Type=Scalable
 
 [Status]
 Context=Status
-Size=96
-MinSize=8
-MaxSize=512
-Type=Scalable
-
-[Categories]
-Context=Categories
-Size=96
-MinSize=8
-MaxSize=512
-Type=Scalable
-
-[Devices]
-Size=96
-Context=Devices
-Type=Scalable
-MinSize=8
-MaxSize=512
-
-[Emblems]
-Size=96
-Context=Emblems
+Size=22
 Type=Scalable
 MinSize=8
 MaxSize=512

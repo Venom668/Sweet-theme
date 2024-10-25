@@ -47,12 +47,6 @@
       }
     }
   }
-  &.background {
-    background-color: transparentize(darken($base_color,3%),0.05);
-    &:backdrop {
-      background-color: transparentize(darken($base_color,3%),0.05);
-    }
-  }
 
   notebook {
     > stack:only-child { // the :not(:only-child) is for "hidden" notebooks
@@ -130,14 +124,14 @@
       }
       &:active { background-color: transparent; }
     }
-     // Home icon
-     button > .horizontal > image.dim-label { 
+      // Home icon
+      button > .horizontal > image.dim-label { 
       padding: 3px 0px 3px 12px; 
       border-right: none;
       margin-right: -6px;
     }
 
-   // Reset path buttons appearance
+    // Reset path buttons appearance
     button {
       background: transparent;
       border: none;
@@ -145,15 +139,14 @@
       padding: 0;
     }
 
-   // Selected dir
+    // Selected dir
     .current-dir  {
     
       label, image { 
         padding: 6px 12px;
         @include button(active-header); 
-        
+        box-shadow: none;
       }
-      image { background: $selected_bg_color; }
     }
     
     button.current-dir:only-child {
@@ -165,13 +158,12 @@
       label { border-radius:0px 23px 23px 0px; }
     }
   }
-
+  
   // search entry
   #NautilusQueryEditor { 
 
     margin-top: 8px;
     margin-bottom: 8px;
-    box-shadow: none;
 
     #NautilusQueryEditorTag {
       > button {
@@ -188,14 +180,6 @@
     }
 
     > text, > image { margin: 0; }
-  }
-
-  .linked:not(.vertical) > entry { 
-    border-radius: 10px;
-    margin-right: 5px;
-    &:focus {
-      border-color: transparentize($selected_bg_color, 0.4);
-    }
   }
 }
 
