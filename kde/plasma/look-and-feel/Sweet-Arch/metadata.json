@@ -1,5 +1,5 @@
 {
-    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPackageStructure": "Plasma/LookAndFeel/Splash",
     "KPlugin": {
         "Authors": [
             {
@@ -7,7 +7,7 @@
                 "Name": "Abraham Murciano"
             }
         ],
-        "Category": "Plasma Look And Feel",
+        "Category": "",
         "EnabledByDefault": true,
         "Id": "Sweet-Arch",
         "License": "GPL 3+",
