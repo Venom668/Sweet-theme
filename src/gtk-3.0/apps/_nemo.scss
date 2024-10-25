@@ -10,15 +10,14 @@
             }
             &:selected {
                 background: $selected_bg_color;
-                color: $selected_fg_color;
             }
         }
     }
 
     .sidebar {
+        color:  $fg_color;
         background-color: $_sidebar_color; 
         .view, .iconview, row {
-            color: #98abb2;
             background-color: transparent;
         }
     }
@@ -60,7 +59,7 @@
 
     .nemo-inactive-pane .view:not(:selected),
     .nemo-inactive-pane iconview {
-        background-color: darken($base_color, 6%); 
+        background-color: darken($base_color, 7%); 
     }
     
 }

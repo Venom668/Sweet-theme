@@ -28,7 +28,7 @@
     widget .vertical {
         background: $_sidebar_color;
         padding: 3px 2px;
-        color: #98abb2;
+        color: $fg_color;
         &:hover {
         background-color: transparentize(darken($_sidebar_color, 2%), 0.05);
         }

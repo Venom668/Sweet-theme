@@ -5,16 +5,11 @@
 
   &.panel {
     background-color: $panel_bg_color;
-    color: $panel_fg_color;
+  
     text-shadow: none;
     -gtk-icon-shadow: none;
   
     button.flat:not(.open_group){ @extend %panelbutton; }
-
-    //Systemload plugin
-    progressbar trough {
-      background-color: transparentize(white, 0.85);
-    }
   }
 }
   
@@ -45,12 +40,11 @@
   
     &:hover {
       border: none;
-      background-color: lighten($panel_bg_color, 7%);
+      background-color: lighten($panel_bg_color, 10%);
     }
     &:active, &:checked {
       color: $panel_fg_color;
       @include selected-tab(right);
-      background-color: lighten($panel_bg_color, 5%);
   
       label, image { color: inherit; }
     }
@@ -99,7 +93,6 @@ window.thunar toolbar#location-toolbar > toolitem > widget > widget.linked.path-
 .thunar scrolledwindow.sidebar treeview.view {
   background: darken($_sidebar_color, 2%);
   padding: 1.5px;
-  color: #98abb2;
 
   &:hover {
     background: lighten($_sidebar_color, 5%);

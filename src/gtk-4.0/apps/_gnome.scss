@@ -124,14 +124,14 @@
       }
       &:active { background-color: transparent; }
     }
-      // Home icon
-      button > .horizontal > image.dim-label { 
+     // Home icon
+     button > .horizontal > image.dim-label { 
       padding: 3px 0px 3px 12px; 
       border-right: none;
       margin-right: -6px;
     }
 
-    // Reset path buttons appearance
+   // Reset path buttons appearance
     button {
       background: transparent;
       border: none;
@@ -139,14 +139,15 @@
       padding: 0;
     }
 
-    // Selected dir
+   // Selected dir
     .current-dir  {
     
       label, image { 
         padding: 6px 12px;
         @include button(active-header); 
-        box-shadow: none;
+        
       }
+      image { background: $selected_bg_color; }
     }
     
     button.current-dir:only-child {
@@ -158,7 +159,7 @@
       label { border-radius:0px 23px 23px 0px; }
     }
   }
-  
+
   // search entry
   #NautilusQueryEditor { 
 
@@ -272,4 +273,18 @@
     box-shadow: none;
     &:hover { border-color: $selected_bg_color; }
   } 
+}
+
+/*******************
+ * Calendar events *
+********************/
+.color-light {
+  &.timed label, .event-popover label {
+    color: $fg_color;
+    opacity: 1;
+  }
+  & label {
+    color: $bg_color;
+    opacity: 1;
+  }
 }

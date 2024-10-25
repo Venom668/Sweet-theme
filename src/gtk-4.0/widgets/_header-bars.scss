@@ -10,7 +10,7 @@ headerbar {
   border-radius: 0;
   &:backdrop {
     border-color: $backdrop_borders_color;
-  // background-image: none;
+   // background-image: none;
 
     transition: $backdrop_transition;
   }
@@ -28,7 +28,7 @@ headerbar {
 
     @extend .dim-label;
   }
-
+ 
   entry { min-height: 24px;}  
   
   button {
@@ -38,7 +38,7 @@ headerbar {
     margin-bottom: 5px;
     box-shadow: none;
     &.image-button{
-      padding: 3px 4px;
+       padding: 3px 4px;
     }
     &.suggested-action{
       box-shadow: none;
@@ -90,7 +90,7 @@ headerbar {
     }
 
     @each $b_type, $b_color in (suggested-action, $cyan),
-                              (destructive-action, $destructive_color) {
+                               (destructive-action, $destructive_color) {
       &.#{$b_type} {
         font-weight: bold;
         min-height: 24px;
@@ -162,14 +162,14 @@ headerbar {
   }
   .linked > button:active{
     @extend %linked-header;
-    background: #00e8b7;
+    background: linear-gradient(to right, #c50ed2, #8500f7) ;
     color: rgb(255, 250, 250);
   }
   .linked > button:checked{
     @extend %linked-header;
     border-radius: 23px;
-    background: #00e8b7;
-    box-shadow: 0px 2px 4px rgba(177, 177, 177, 0.753);
+    background: linear-gradient(to right, #c50ed2, #8500f7);
+    box-shadow: 0px 0px 5px transparentize(#c50ed2, 0.02);
     color: rgb(255, 250, 250);
     &:backdrop{
       color: darken(rgb(255, 250, 250), 4%);
@@ -238,18 +238,6 @@ headerbar {
     margin-bottom: 10px;
   }
   separator { background: transparent; }
-
-  viewswitcher, switcher {
-    > box.horizontal {
-      > button.radio {
-        image { margin-left: 7px; }
-        label { margin-right: 7px; }
-        margin: 0;
-        padding: 0;
-        border-radius: 0;
-      }
-    }
-  } 
 }
 
 .background:not(.tiled):not(.maximized) .titlebar {
@@ -300,20 +288,16 @@ window {
 }
 
 // Gnome 45
-.nautilus-window {
-  .sidebar-pane .top-bar {
-    headerbar, &:backdrop {
-      background-image: linear-gradient(to right, #171e27 40px,
-                                        $_sidebar_color 35px,$_sidebar_color 36px,
-                                        $_sidebar_color 36px,$_sidebar_color 99%, 
-                                        $_sidebar_color 100%);
-      border-top-right-radius: 0;
-      color: #98abb2;
+
+.sidebar-pane, .content-pane {
+  .top-bar {
+    &, headerbar {
+      background-color: $headerbar_color;
     }
-    headerbar {  padding: 6px; }
   }
-  .content-pane .top-bar headerbar {
-    background-color: $base_color;
-    border-top-left-radius: 0;
-  }
+}
+
+.nautilus-window .sidebar-pane .top-bar headerbar {
+  padding-top: 6px;
+  padding-bottom: 6px;
 }

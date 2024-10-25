@@ -73,8 +73,8 @@ levelbar {
     }
 
     &.empty {
-      background-color: darken($base_color, 10%);
-      border-color: darken($base_color, 10%);
+      background-color: lighten($base_color, 10%);
+      border-color: lighten($base_color, 10%);
     }
   }
 }
